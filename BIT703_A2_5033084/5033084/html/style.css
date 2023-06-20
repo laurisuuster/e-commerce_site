@@ -1,0 +1,182 @@
+.navbar .navbar-nav .nav-link .nav-item {
+  color: #000000;
+  font-size: 1.1em;
+}
+
+.navbar .navbar-nav .nav-link:hover .nav {
+  color: #808080;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar .navbar-nav .nav-item .nav-link .nav {
+    padding: 0 0.5em;
+  }
+
+  .navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
+    border-right: 1px solid lightgray;
+
+  }
+}
+
+
+/* Star rating fill */
+.checked {
+  color: orange;
+}
+
+
+/* cards */
+
+/**
+  Default Markup
+**/
+
+body {
+  background: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/**
+  Component
+**/
+
+label {
+  width: 100%;
+}
+
+.card-input-element {
+  display: none;
+}
+
+.card-input {
+  margin: 10px;
+  padding: 0px;
+}
+
+.card-input:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked+.card-input {
+  box-shadow: 0 0 1px 1px gray;
+}
+
+
+
+
+
+.fontuser {
+  position: relative;
+}
+
+.fontuser i {
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  color: gray;
+}
+
+.btn-lg {
+
+
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
+}
+
+.btn {
+  border-radius: 0px;
+
+}
+
+
+li[name=count] {
+  display: inline-block;
+  font-size: 1.0em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 2.5rem;
+}
+
+
+
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: gray;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

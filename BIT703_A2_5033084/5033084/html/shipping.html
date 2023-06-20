@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!--Responsive design arrangments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Title-->
+  <title>BIT703_A3_5033084 </title>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Include Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!--Include Local CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Include Local JS file-->
+  <script src="script.js"></script>
+  <!--Google maps API Use sample pic till valid browser key -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+    defer></script>
+  <!--Include Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
+
+  <header>
+    <!--Navbars require a wrapping .navbar with .navbar-expand{-sm|-md|-lg|-xl|-xxl} for responsive collapsing-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+
+        <!--Company logo-->
+        <img src="pic/small logo.jpg" class="img-fluid" alt="small logo">
+
+        <!--Hamburger menu config-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--.collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint.-->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <!--Navbar elements on the right side-->
+          <form class="d-flex justify-content-lg-start">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+
+          <!--Navbar elements on the left side-->
+          <form class="d-flex justify-content-end">
+
+            <!--Navbar elements as unordered list-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="product.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="cart.html">Help</a>
+              </li>
+            </ul>
+
+            <!--Cart Items button-->
+            <button class="btn btn-secondary" type="submit">Your Cart
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </button>
+
+        </div>
+
+      </div>
+    </nav>
+
+
+
+  </header>
+  <main class="my-5">
+
+    <!-- Navbar 2.0-->
+    <div class="container">
+      <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+          <h4><a class="nav-link text-muted" href="cart.html">1. Shopping Cart
+              <hr></a></h4>
+        </li>
+
+        <li class="nav-item">
+          <h4><a class="nav-link text-black" href="shipping.html">2. Shipping Details
+              <hr></a></h4>
+        </li>
+        <li class="nav-item">
+          <h4><a class="nav-link text-muted" href="payment.html">3. Payment Options
+              <hr></a></h4>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- **** **** **** Main Content Area **** **** **** **** -->
+    <div class="w-100 py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row">
+              <h3><small class="text-muted">Shopping cart</small>
+                <hr>
+              </h3>
+              <!--First subcolumn for First Name-->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="inputsm"></label>
+                  <input class="form-control input-sm" placeholder="First Name" type="text" required>
+                </div>
+              </div>
+              <!--First subcolumn for Last name-->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="inputsm"></label>
+                  <input class="form-control input-sm" placeholder="Last Name" type="text" required>
+                </div>
+              </div>
+              <!--First subcolumn for quantity-->
+
+            </div>
+            <!--row-->
+
+            <!--Address-->
+            <div class="form-group">
+              <label for="inputsm"></label>
+              <input class="form-control input-sm" placeholder="Address" type="text" required>
+            </div>
+
+            <!--Address 2-->
+            <div class="form-group">
+              <label for="inputsm"></label>
+              <input class="form-control input-sm" placeholder="Address 2" type="text" required>
+            </div>
+            <div class="row">
+
+              <!--First subcolumn for Dropdown for country-->
+              <div class="col-lg-6">
+                <br>
+                <select class="form-select form-select" aria-label="default select">
+                  <option value="Antartica">Antarctica (Scott Base)</option>
+                  <option value="Antigua and Barbuda">Antarctica (McMurdo)</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Denmark">Denmark</option>
+                  <option value="East Timor">East Timor</option>
+                  <option value="Estonia">Estonia</option>
+                  <option value="Fiji">Fiji</option>
+                  <option value="Finland">Finland</option>
+                  <option value="France">France</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Gibraltar">Gibraltar</option>
+                  <option value="Greece">Greece</option>
+                  <option value="Greenland">Greenland</option>
+                  <option value="Hong Kong">Hong Kong</option>
+                  <option value="Iceland">Iceland</option>
+                  <option value="Ireland">Ireland</option>
+                  <option value="Israel">Israel</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Jamaica">Jamaica</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Latvia">Latvia</option>
+                  <option value="Liechtenstein">Liechtenstein</option>
+                  <option value="Lithuania">Lithuania</option>
+                  <option value="New Zealand">New Zealand</option>
+                  <option value="Norway">Norway</option>
+                  <option value="Poland">Poland</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Samoa">Samoa</option>
+                  <option value="Saudi Arabia">Saudi Arabia</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Sweden">Sweden</option>
+                  <option value="Switzerland">Switzerland</option>
+                  <option value="Tonga">Tonga</option>
+                  <option value="Ukraine">Ukraine</option>
+                  <option value="United Arab Emirates">United Arab Emirates</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="United States">United States</option>
+                  <option value="Vanuatu">Vanuatu</option>
+                </select>
+              </div>
+              <!--First subcolumn for City-->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="inputsm"></label>
+                  <input class="form-control input-sm" placeholder="City" type="text" required>
+                </div>
+              </div>
+              <!--First subcolumn for Zip/Post Code-->
+              <div class="col-lg-6 ">
+                <div class="form-group">
+                  <label for="inputsm"></label>
+                  <input class="form-control input-sm" placeholder="Zip/Postal Code" type="text" required>
+                </div>
+              </div>
+              <!--First subcolumn for Phone Number-->
+              <div class="col-lg-6 ">
+                <div class="form-group">
+                  <label for="inputsm"></label>
+                  <input class="form-control input-sm" placeholder="Phone Number" type="text" required>
+                </div>
+              </div>
+
+              <!--First subcolumn for Zip/Post Code-->
+              <div class="col-lg-6 ">
+                <div class="form-group">
+                  <label for="inputsm"></label>
+                  <input class="form-control input-sm" placeholder="Zip/Postal Code" type="text" required>
+                </div>
+              </div>
+              <!--First subcolumn for Phone Number-->
+              <div class="col-lg-6 ">
+                <div class="form-group">
+                  <label for="inputsm"></label>
+                  <input class="form-control input-sm" placeholder="Phone Number" type="text" required>
+                </div>
+              </div>
+              <br>
+              <!--Radio buttons for free shipping and next day delivery-->
+              <div class="container my-3">
+
+                <div class="row">
+
+                  <div class="col-md-6 col-lg-6 col-sm-6">
+
+                    <label>
+                      <input type="radio" name="product" selected checked class="card-input-element" />
+
+                      <div class="card card-default card-input">
+                        <div class="card-body">
+
+                          <h3><small class="text">Free Shipping</small></h3>
+                          <p><small class="text">Between 2-5 working days</small></p>
+
+
+
+                        </div>
+                      </div>
+
+                    </label>
+
+                  </div>
+                  <div class="col-md-6 col-lg-6 col-sm-6">
+
+                    <label>
+                      <input type="radio" name="product" class="card-input-element" />
+
+                      <div class="card card-default card-input">
+
+                        <div class="card-body">
+                          <h3><small class="text">Next day delivery</small></h3>
+                          <p><small class="text">24 hours from checkout</small></p>
+
+                        </div>
+                      </div>
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <div class="row">
+              <br>
+
+              <div class="col-lg-4">
+                <div class="d-grid gap-2">
+                  <button class="btn btn-dark" type="button">Next</button>
+                </div>
+              </div>
+              <!--First subcolumn for text-->
+              <div class="col-lg-4">
+                <div class="d-grid gap-2">
+                  <button class="btn btn-secondary" type="button">Cancel</button>
+                </div>
+              </div>
+
+
+            </div>
+
+            <!--row-->
+
+
+          </div>
+          <!--First col-->
+
+          <div class="col-lg-4">
+
+            <h3><small class="text-muted">Summary</small>
+              <hr>
+              <div class="row">
+                <div class="col-lg-5">
+                  <div class="thumbnail"><img src="https://picsum.photos/300/200" class="img-fluid" alt="...">
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <h4><small class="text-muted"> Dreadnought</small></h4>
+                  <h4><small class="text-muted">$ 300</small></h4>
+
+                </div>
+              </div>
+              <br>
+
+              <div class="row">
+                <div class="col-lg-5">
+                  <div class="thumbnail"><img src="https://picsum.photos/300/200" class="img-fluid" alt="...">
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <h4><small class="text-muted"> Victory</small></h4>
+                  <h4><small class="text-muted">$ 300</small></h4>
+
+                </div>
+              </div>
+              <br>
+
+            </h3>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>HAVE A VOUCHER?</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
+            </select>
+            <br>
+            <div class="row">
+              <div class="col-lg-6">
+                <h4><small class="text-muted">SUBTOTAL</small></h4>
+              </div>
+              <div class="col-lg-6">
+                <h4><small class="text-muted">$600</small></h4>
+              </div>
+            </div>
+            <!--row-->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <h4><small class="text-muted">SHIPPING</small></h4>
+              </div>
+              <div class="col-lg-6">
+                <h4><small class="text-muted">FREE</small></h4>
+              </div>
+            </div>
+            <!--row-->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <h4><small class="text-muted">TAXES</small></h4>
+              </div>
+              <div class="col-lg-6">
+                <h4><small class="text-muted">$13</small></h4>
+              </div>
+            </div>
+            <!--row-->
+            <hr>
+            <div class="row">
+              <div class="col-lg-6">
+                <h3><small class="text-muted">TOTAL</small></h3>
+              </div>
+              <div class="col-lg-6">
+                <h3><small class="text-muted">$613</small></h3>
+              </div>
+            </div>
+            <!--row-->
+
+          </div>
+          <!--Second col-->
+
+        </div>
+        <!--row-->
+
+      </div>
+      <!--container-->
+    </div>
+    <!--Flex shrink-->
+
+
+
+
+  </main>
+
+  <!-- FOOTER https://bootstrapious.com/p/bootstrap-footer-bottom  -->
+  <hr>
+  <footer class="w-100 py-4 flex-shrink-0">
+    <!--Navbars require a wrapping .navbar with .navbar-expand{-sm|-md|-lg|-xl|-xxl} for responsive collapsing-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+
+
+
+        <!--Hamburger menu config-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--.collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint.-->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+
+          <!--Navbar elements on the left side-->
+          <form class="d-flex justify-content-end">
+
+            <!--Navbar elements as unordered list-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="product.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="cart.html">Help</a>
+              </li>
+            </ul>
+
+
+        </div>
+
+      </div>
+    </nav>
+    <div class="row">
+      <div class="text-center">
+        <br>
+        <p class="small text-muted mb-0">&copy; Copyrights 2023. All rights reserved by NZ Robots & Droids Ltd <a
+            class="text-primary"></p>
+
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

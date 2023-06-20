@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!--Responsive design arrangments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Title-->
+  <title>BIT703_A3_5033084 </title>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Include Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!--Include Local CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Include Local JS file-->
+  <script src="script.js"></script>
+
+  <!--Include Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
+
+  <header>
+    <!--Navbars require a wrapping .navbar with .navbar-expand{-sm|-md|-lg|-xl|-xxl} for responsive collapsing-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+
+        <!--Company logo-->
+        <img src="pic/small logo.jpg" class="img-fluid" alt="small logo">
+
+        <!--Hamburger menu config-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--.collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint.-->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <!--Navbar elements on the right side-->
+          <form class="d-flex justify-content-lg-start">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+
+          <!--Navbar elements on the left side-->
+          <form class="d-flex justify-content-end">
+
+            <!--Navbar elements as unordered list-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="product.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="cart.html">Help</a>
+              </li>
+            </ul>
+
+            <!--Cart Items button-->
+            <button class="btn btn-secondary" type="submit">Your Cart
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </button>
+
+        </div>
+
+      </div>
+    </nav>
+
+
+
+  </header>
+  <main class="my-3">
+    <!--Large Product photo and description area at the beginning of the page-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-start">
+          <div class="thumbnail"><img src="pic/catdrone.jpg" class="img-fluid" alt="..."></div>
+
+        </div>
+        <div class="col-lg-6 ">
+          <p class="h1">Intercepter</p><br>
+          <div class="row">
+            <div class="col-4 align-content-center">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="col-8">
+              <p><small class="text-muted">5 reviews</small></p>
+
+            </div>
+          </div>
+          <!---->
+          <hr>
+          <div class="row">
+            <div class="col-6 align-content-center">
+              <h3><small class="text-muted">$ 1232</small></h3>
+
+            </div>
+            <div class="col-6">
+              <!--Dropdown menu for different models-->
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Select model
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Longrange battery</a></li>
+                  <li><a class="dropdown-item" href="#">Wide lens mod</a></li>
+                  <li><a class="dropdown-item" href="#">Ultimate carbon</a></li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+          <hr>
+          <br>
+          <p class="text-muted"> Introducing Intercepter drone- Our true best selling classic redesigned for improved
+            performance,
+            <br><br>
+            Featuring new hypersmooth mega image stabilization and increased flight time gives this quadcopter
+            a market leading advantage.
+            <br><br>
+            Drone has been long standing favorite amongst small creative agecies and personal hobbyst alike. This
+            is achived through low pricepoint and plentiful features,
+
+          </p>
+          <div class="row">
+            <div class="col-4">
+              <br>
+              <hr>
+              <br>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-dark ">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Featured Categories -->
+    <div class="w-100 py-4 flex-shrink-0">
+      <div class="container">
+        <div class="row ">
+          <figure class="text-center">
+            <hr><br>
+            <p class="h1">Similar Products</p>
+            <br>
+          </figure>
+
+          <div class="col-lg-4 col-md-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="thumbnail"><img src="pic/drone 1.jpg" class="img-fluid" alt="Victory"></div>
+              </div>
+
+              <div class="col-lg-6">
+                <h4><small class="text-muted"> Victory</small></h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <h4><small class="text-muted">$ 2200</small></h4>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="thumbnail"><img src="pic/drone 2.jpg" class="img-fluid" alt="Invincible"></div>
+              </div>
+
+              <div class="col-lg-6">
+                <h4><small class="text-muted"> Invincible</small></h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <h4><small class="text-muted">$ 2500</small></h4>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="thumbnail"><img src="pic/drone 3.jpg" class="img-fluid" alt="Dreadnought"></div>
+              </div>
+
+              <div class="col-lg-6">
+                <h4><small class="text-muted">Dreadnought</small></h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h4><small class="text-muted">$ 2900</small></h4>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <!--Reviews section-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <p class="h1">Reviews</p>
+              <br>
+            </div>
+            <div class="col-lg-8">
+
+            </div>
+
+          </div>
+          <!--First Review-->
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="row">
+                <!--Rounded photo of user profile picture-->
+                <div class="col-lg-6">
+                  <img src="https://picsum.photos/100/100" alt="logo1" class="rounded-circle">
+
+                </div>
+                <div class="col-lg-6">
+                  <h3><small class="text-muted"> JOHN DOE</small></h3>
+                  <p class="text-muted mb-0">august 14, 2018</p>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+
+
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-8">
+              <p class="text-muted mb-0"> I'm glad to see such a wide array of products on a local website!
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. </p>
+            </div>
+
+          </div>
+          <br>
+
+          <!--Second Review-->
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="row">
+                <!--Rounded photo of user profile picture-->
+                <div class="col-lg-6">
+                  <img src="https://picsum.photos/100/100" alt="logo1" class="rounded-circle">
+
+                </div>
+                <div class="col-lg-6">
+                  <h3><small class="text-muted"> KAT BUSH</small></h3>
+                  <p class="text-muted mb-0">january 05, 2023</p>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+
+
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-8">
+              <p class="text-muted mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+        <!--Container DIV-->
+
+
+  </main>
+
+
+  <!-- FOOTER https://bootstrapious.com/p/bootstrap-footer-bottom  -->
+  <hr>
+  <footer class="w-100 py-4 flex-shrink-0">
+    <!--Navbars require a wrapping .navbar with .navbar-expand{-sm|-md|-lg|-xl|-xxl} for responsive collapsing-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+
+
+
+        <!--Hamburger menu config-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--.collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint.-->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+
+          <!--Navbar elements on the left side-->
+          <form class="justify-content-center">
+
+            <!--Navbar elements as unordered list-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-evenly">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="product.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="cart.html">Help</a>
+              </li>
+            </ul>
+
+
+        </div>
+
+      </div>
+
+    </nav>
+    <!--Copyright statement at the bottom of page.-->
+    <div class="col-12">
+      <br>
+      <p class="small text-center text-muted mb-0">&copy; Copyrights 2023. All rights reserved by NZ Robots & Droids Ltd
+        <a class="text-primary"></p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
